@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CoverageRouteImport } from './routes/coverage'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -44,6 +45,11 @@ const ProjectsRoute = ProjectsRouteImport.update({
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/coverage': typeof CoverageRoute
   '/faq': typeof FaqRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/coverage': typeof CoverageRoute
   '/faq': typeof FaqRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/coverage': typeof CoverageRoute
   '/faq': typeof FaqRoute
+  '/portfolio': typeof PortfolioRoute
   '/process': typeof ProcessRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/coverage'
     | '/faq'
+    | '/portfolio'
     | '/process'
     | '/projects'
     | '/services'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/coverage'
     | '/faq'
+    | '/portfolio'
     | '/process'
     | '/projects'
     | '/services'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/coverage'
     | '/faq'
+    | '/portfolio'
     | '/process'
     | '/projects'
     | '/services'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoverageRoute: typeof CoverageRoute
   FaqRoute: typeof FaqRoute
+  PortfolioRoute: typeof PortfolioRoute
   ProcessRoute: typeof ProcessRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
@@ -208,6 +221,13 @@ declare module '@tanstack/react-router' {
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoverageRoute: CoverageRoute,
   FaqRoute: FaqRoute,
+  PortfolioRoute: PortfolioRoute,
   ProcessRoute: ProcessRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
@@ -271,3 +292,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
