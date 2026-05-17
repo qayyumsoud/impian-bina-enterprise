@@ -1,13 +1,13 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.webp";
 
 export function Footer() {
   return (
     <footer className="bg-accent text-accent-foreground py-20">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <Link to="/" className="flex items-baseline gap-1 mb-6" aria-label="Impian Bina home">
-            <span className="font-black text-3xl tracking-tighter uppercase">Impian Bina</span>
-            <span className="size-2 bg-primary rounded-full" />
+          <Link to="/" className="inline-block mb-6 bg-white p-3" aria-label="Impian Bina home">
+            <img src={logo} alt="Impian Bina — Building Dream" className="h-16 w-auto" width={160} height={64} />
           </Link>
           <p className="text-white/50 max-w-sm mb-6 leading-relaxed">
             CIDB-licensed construction across Negeri Sembilan and Melaka. From foundation
@@ -34,6 +34,7 @@ export function Footer() {
             <li><Link className="hover:text-primary" to="/services">Services</Link></li>
             <li><Link className="hover:text-primary" to="/certifications">Certifications</Link></li>
             <li><Link className="hover:text-primary" to="/projects">Projects</Link></li>
+            <li><Link className="hover:text-primary" to="/portfolio">Portfolio Design</Link></li>
             <li><Link className="hover:text-primary" to="/process">Our Process</Link></li>
             <li><Link className="hover:text-primary" to="/coverage">Coverage</Link></li>
             <li><Link className="hover:text-primary" to="/contact">Contact</Link></li>
