@@ -2,6 +2,22 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { toast } from "sonner";
+import { MessageCircle } from "lucide-react";
+
+const WA_NUMBER = "60127600000";
+const WA_TEMPLATE = `Hi Impian Bina,
+
+Saya ingin mendapatkan sebut harga untuk projek berikut:
+
+• Nama:
+• Jenis projek: (Residential / Renovation / Commercial / Government / Infrastructure)
+• Lokasi tapak:
+• Anggaran keluasan / bilangan tingkat:
+• Tarikh sasaran mula:
+• Bajet:
+
+Terima kasih.`;
+const WA_URL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_TEMPLATE)}`;
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -27,6 +43,30 @@ function ContactPage() {
         title="Let's talk about your build."
         intro="Phone, WhatsApp, email, or walk into our Seremban office. We respond to every inquiry within one working day."
       />
+
+      {/* WhatsApp quick-quote */}
+      <section className="border-b border-foreground/10 bg-primary text-primary-foreground">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <p className="mono text-[10px] uppercase tracking-widest opacity-80 mb-2">Fastest channel</p>
+            <h2 className="text-2xl md:text-3xl font-black tracking-tighter uppercase">
+              Get a quotation on WhatsApp in one tap.
+            </h2>
+            <p className="mt-2 text-sm opacity-90 max-w-xl">
+              Click below — we'll open WhatsApp with a ready-to-send message template. Fill in your details and hit send.
+            </p>
+          </div>
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 bg-background text-foreground px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-accent hover:text-accent-foreground transition-colors whitespace-nowrap"
+          >
+            <MessageCircle className="size-5" />
+            Chat on WhatsApp
+          </a>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
