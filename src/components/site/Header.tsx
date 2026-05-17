@@ -1,12 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.webp";
 
 const navItems = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/certifications", label: "Certifications" },
   { to: "/projects", label: "Projects" },
+  { to: "/portfolio", label: "Portfolio" },
   { to: "/videos", label: "Videos" },
   { to: "/process", label: "Process" },
   { to: "/coverage", label: "Coverage" },
@@ -19,9 +21,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-foreground/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-baseline gap-1" aria-label="Impian Bina home">
-          <span className="font-black text-2xl tracking-tighter uppercase">Impian Bina</span>
-          <span className="size-1.5 bg-primary rounded-full" />
+        <Link to="/" className="flex items-center" aria-label="Impian Bina home">
+          <img src={logo} alt="Impian Bina — Building Dream" className="h-12 w-auto" width={120} height={48} />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-[12px] font-semibold uppercase tracking-wider" aria-label="Primary">
