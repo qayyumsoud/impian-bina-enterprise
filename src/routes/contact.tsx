@@ -89,8 +89,8 @@ function ContactPage() {
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Office</p>
               <address className="not-italic text-lg font-semibold leading-snug">
-                No. 42-1, Jalan Pusat Komersial,<br />
-                70450 Seremban,<br />
+                E30 Jalan Melati, Felda Sendayan,<br />
+                71950 Seremban,<br />
                 Negeri Sembilan, Malaysia
               </address>
             </div>

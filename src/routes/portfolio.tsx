@@ -53,34 +53,34 @@ type Design = {
 };
 
 const designs: Design[] = [
-  { code: "RK01", rooms: "1 Bilik / 1 Bilik Air", sqft: 388, render: rk01, plan: rk01p },
-  { code: "RK02", rooms: "1 Bilik / 1 Bilik Air", sqft: 425, render: rk02, plan: rk02p },
-  { code: "RK03", rooms: "1 Bilik / 1 Bilik Air", sqft: 434, render: rk03, plan: rk03p },
-  { code: "RK04", rooms: "1 Bilik / 1 Bilik Air", sqft: 463, render: rk04, plan: rk04p },
-  { code: "RK05", rooms: "1 Bilik / 1 Bilik Air", sqft: 463, render: rk05, plan: rk05p },
-  { code: "RK06", rooms: "1 Bilik / 1 Bilik Air", sqft: 490, render: rk06, plan: rk06p },
-  { code: "RK07", rooms: "2 Bilik / 1 Bilik Air", sqft: 571, render: rk07, plan: rk07p },
-  { code: "RK08", rooms: "2 Bilik / 1 Bilik Air", sqft: 669, render: rk08, plan: rk08p },
-  { code: "RK09", rooms: "3 Bilik / 1 Bilik Air", sqft: 680, render: rk09, plan: rk09p },
-  { code: "RK10", rooms: "1 Bilik / 1 Bilik Air", sqft: 425, render: rk10, plan: rk10p },
-  { code: "RK11", rooms: "2 Bilik / 1 Bilik Air", sqft: 668, render: rk11, plan: rk11p },
-  { code: "RK12", rooms: "1 Bilik / 1 Bilik Air", sqft: 490, render: rk12, plan: rk12p },
-  { code: "RK13", rooms: "2 Bilik / 1 Bilik Air", sqft: 571, render: rk13, plan: rk13p },
-  { code: "RK14", rooms: "2 Bilik / 1 Bilik Air", sqft: 570, render: rk14, plan: rk14p },
-  { code: "RK15", rooms: "2 Bilik / 1 Bilik Air", sqft: 570, render: rk15, plan: rk15p },
-  { code: "RK16", rooms: "2 Bilik / 1 Bilik Air", sqft: 668, render: rk16, plan: rk16p },
-  { code: "RK17", rooms: "2 Bilik / 1 Bilik Air", sqft: 669, render: rk17, plan: rk17p },
-  { code: "RK18", rooms: "2 Bilik / 1 Bilik Air", sqft: 658, render: rk18, plan: rk18p },
-  { code: "RK19", rooms: "2 Bilik / 1 Bilik Air", sqft: 668, render: rk19, plan: rk19p },
-  { code: "RK20", rooms: "2 Bilik / 1 Bilik Air", sqft: 570, render: rk20, plan: rk20p },
+  { code: "RK01", rooms: "1 Bedroom / 1 Bathroom", sqft: 388, render: rk01, plan: rk01p },
+  { code: "RK02", rooms: "1 Bedroom / 1 Bathroom", sqft: 425, render: rk02, plan: rk02p },
+  { code: "RK03", rooms: "1 Bedroom / 1 Bathroom", sqft: 434, render: rk03, plan: rk03p },
+  { code: "RK04", rooms: "1 Bedroom / 1 Bathroom", sqft: 463, render: rk04, plan: rk04p },
+  { code: "RK05", rooms: "1 Bedroom / 1 Bathroom", sqft: 463, render: rk05, plan: rk05p },
+  { code: "RK06", rooms: "1 Bedroom / 1 Bathroom", sqft: 490, render: rk06, plan: rk06p },
+  { code: "RK07", rooms: "2 Bedrooms / 1 Bathroom", sqft: 571, render: rk07, plan: rk07p },
+  { code: "RK08", rooms: "2 Bedrooms / 1 Bathroom", sqft: 669, render: rk08, plan: rk08p },
+  { code: "RK09", rooms: "3 Bedrooms / 1 Bathroom", sqft: 680, render: rk09, plan: rk09p },
+  { code: "RK10", rooms: "1 Bedroom / 1 Bathroom", sqft: 425, render: rk10, plan: rk10p },
+  { code: "RK11", rooms: "2 Bedrooms / 1 Bathroom", sqft: 668, render: rk11, plan: rk11p },
+  { code: "RK12", rooms: "1 Bedroom / 1 Bathroom", sqft: 490, render: rk12, plan: rk12p },
+  { code: "RK13", rooms: "2 Bedrooms / 1 Bathroom", sqft: 571, render: rk13, plan: rk13p },
+  { code: "RK14", rooms: "2 Bedrooms / 1 Bathroom", sqft: 570, render: rk14, plan: rk14p },
+  { code: "RK15", rooms: "2 Bedrooms / 1 Bathroom", sqft: 570, render: rk15, plan: rk15p },
+  { code: "RK16", rooms: "2 Bedrooms / 1 Bathroom", sqft: 668, render: rk16, plan: rk16p },
+  { code: "RK17", rooms: "2 Bedrooms / 1 Bathroom", sqft: 669, render: rk17, plan: rk17p },
+  { code: "RK18", rooms: "2 Bedrooms / 1 Bathroom", sqft: 658, render: rk18, plan: rk18p },
+  { code: "RK19", rooms: "2 Bedrooms / 1 Bathroom", sqft: 668, render: rk19, plan: rk19p },
+  { code: "RK20", rooms: "2 Bedrooms / 1 Bathroom", sqft: 570, render: rk20, plan: rk20p },
 ];
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio Design Rumah — Impian Bina (Volume 1)" },
-      { name: "description", content: "20 reka bentuk banglo setingkat siap-bina oleh Impian Bina — 388 hingga 680 kaki persegi, satu hingga tiga bilik. Lihat render 3D dan pelan lantai." },
-      { property: "og:title", content: "Portfolio Design Rumah — Impian Bina" },
+      { title: "Design Portfolio — Impian Bina (Volume 1)" },
+      { name: "description", content: "20 ready-to-build single-storey bungalow designs by Impian Bina — 388 to 680 sq ft, one to three bedrooms. Browse 3D renders and floor plans." },
+      { property: "og:title", content: "Design Portfolio — Impian Bina" },
       { property: "og:description", content: "20 single-storey bungalow designs by Impian Bina. 3D renders and floor plans." },
       { property: "og:url", content: "/portfolio" },
     ],
@@ -92,15 +92,15 @@ export const Route = createFileRoute("/portfolio")({
 function PortfolioPage() {
   const [active, setActive] = useState<Design | null>(null);
   const waMessage = encodeURIComponent(
-    "Hi Impian Bina, saya berminat untuk mendapatkan sebut harga rumah berdasarkan portfolio design anda. Boleh saya dapatkan maklumat lanjut?",
+    "Hi Impian Bina, I'm interested in getting a quotation for a house based on your design portfolio. Could you share more information?",
   );
 
   return (
     <>
       <PageHero
-        eyebrow="Portfolio Design · Volume 1"
-        title="Reka bentuk rumah siap-bina."
-        intro="20 reka bentuk banglo setingkat — daripada 388 hingga 680 kaki persegi. Setiap satu boleh diubah suai mengikut tapak dan keperluan keluarga anda."
+        eyebrow="Design Portfolio · Volume 1"
+        title="Ready-to-build home designs."
+        intro="20 single-storey bungalow designs — from 388 to 680 square feet. Each one can be tailored to your site and family needs."
       />
 
       <section className="py-12 md:py-16 border-b border-foreground/10">
@@ -132,7 +132,7 @@ function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10">
             {designs.map((d, idx) => (
-              <button
+                <button
                 key={d.code}
                 type="button"
                 onClick={() => setActive(d)}
@@ -149,14 +149,14 @@ function PortfolioPage() {
                 <div className="aspect-[4/3] w-full overflow-hidden bg-muted mb-5">
                   <img
                     src={d.render}
-                    alt={`Design ${d.code} — banglo setingkat ${d.rooms}`}
+                    alt={`Design ${d.code} — single-storey bungalow, ${d.rooms}`}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <h2 className="text-2xl font-black tracking-tighter uppercase">Design {d.code}</h2>
                 <p className="mt-2 text-sm text-muted-foreground">{d.rooms}</p>
-                <p className="mt-1 text-sm font-semibold">{d.sqft} kaki persegi</p>
+                <p className="mt-1 text-sm font-semibold">{d.sqft} sq ft</p>
                 <span className="mt-5 mono text-[10px] uppercase tracking-widest text-primary group-hover:underline">
                   View floor plan →
                 </span>
@@ -169,9 +169,9 @@ function PortfolioPage() {
       {/* CTA */}
       <section className="border-t border-foreground/10 bg-accent text-accent-foreground py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-5">Suka mana-mana design?</p>
+          <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-5">Like any of these designs?</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">
-            Kami boleh ubah suai mengikut tapak anda.
+            We can tailor it to your site.
           </h2>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             <a
@@ -180,7 +180,7 @@ function PortfolioPage() {
               rel="noreferrer"
               className="bg-primary text-primary-foreground px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
             >
-              Chat WhatsApp Now
+              Chat on WhatsApp
             </a>
             <a
               href="/contact"
@@ -208,9 +208,9 @@ function PortfolioPage() {
             <div className="flex items-center justify-between border-b border-foreground/10 p-5">
               <div>
                 <p className="mono text-[10px] uppercase tracking-widest text-primary">Floor Plan</p>
-                <h3 className="text-2xl font-black tracking-tighter uppercase">
-                  Design {active.code} · {active.sqft} sqft
-                </h3>
+              <h3 className="text-2xl font-black tracking-tighter uppercase">
+                Design {active.code} · {active.sqft} sq ft
+              </h3>
                 <p className="text-xs text-muted-foreground mt-1">{active.rooms}</p>
               </div>
               <button
@@ -229,7 +229,7 @@ function PortfolioPage() {
             <div className="p-5 flex flex-wrap gap-3 justify-end border-t border-foreground/10">
               <a
                 href={`https://wa.me/60127600000?text=${encodeURIComponent(
-                  `Hi Impian Bina, saya berminat dengan Design ${active.code} (${active.sqft} kaki persegi, ${active.rooms}). Boleh saya dapatkan sebut harga?`,
+                  `Hi Impian Bina, I'm interested in Design ${active.code} (${active.sqft} sq ft, ${active.rooms}). Could I get a quotation?`,
                 )}`}
                 target="_blank"
                 rel="noreferrer"

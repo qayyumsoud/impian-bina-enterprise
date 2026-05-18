@@ -22,8 +22,8 @@ const organizationJsonLd = {
   telephone: "+60-6-760-0000",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "No. 42-1, Jalan Pusat Komersial",
-    postalCode: "70450",
+    streetAddress: "E30 Jalan Melati, Felda Sendayan",
+    postalCode: "71950",
     addressLocality: "Seremban",
     addressRegion: "Negeri Sembilan",
     addressCountry: "MY",
