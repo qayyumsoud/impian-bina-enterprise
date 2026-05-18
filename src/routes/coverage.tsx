@@ -37,18 +37,17 @@ function CoveragePage() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
           <div className="relative">
-            <div className="relative bg-card border border-foreground/10 aspect-square overflow-hidden">
+            <div className="relative bg-card border border-foreground/10 p-6 overflow-hidden">
               <img
                 src={coverageMap}
-                alt="Map showing Negeri Sembilan and Melaka coverage area"
+                alt="Map of Malaysia highlighting Negeri Sembilan and Melaka coverage area"
                 loading="lazy"
-                width={1200}
-                height={1200}
-                className="w-full h-full object-cover"
+                width={1334}
+                height={734}
+                className="w-full h-auto object-contain"
               />
-              {/* Clean label overlay (image text is decorative) */}
-              <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center">
-                <div className="mono text-xs uppercase tracking-[0.3em] text-accent/70">Peninsular Malaysia · South</div>
+              <div className="mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-4 text-center">
+                Malaysia · Highlighted: Negeri Sembilan & Melaka
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-6">

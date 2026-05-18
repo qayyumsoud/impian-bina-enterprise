@@ -7,15 +7,15 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
           <Link to="/" className="inline-block mb-6 bg-white p-3" aria-label="Impian Bina home">
-            <img src={logo} alt="Impian Bina — Building Dream" className="h-16 w-auto" width={160} height={64} />
+            <img src={logo} alt="Impian Bina — Building Dream" className="h-20 w-auto" width={200} height={80} />
           </Link>
           <p className="text-white/50 max-w-sm mb-6 leading-relaxed">
             CIDB-licensed construction across Negeri Sembilan and Melaka. From foundation
             pour to final handover, built to last.
           </p>
           <address className="not-italic space-y-1 mono text-xs text-white/60">
-            <p>No. 42-1, Jalan Pusat Komersial,</p>
-            <p>70450 Seremban, Negeri Sembilan</p>
+            <p>E30 Jalan Melati, Felda Sendayan</p>
+            <p>71950 Seremban, Negeri Sembilan</p>
           </address>
         </div>
 
