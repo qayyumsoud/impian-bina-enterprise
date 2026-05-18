@@ -2,21 +2,24 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.webp";
+import { useLang } from "@/lib/i18n";
 
 const navItems = [
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/certifications", label: "Certifications" },
-  { to: "/projects", label: "Projects" },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/videos", label: "Videos" },
-  { to: "/process", label: "Process" },
-  { to: "/coverage", label: "Coverage" },
-  { to: "/faq", label: "FAQ" },
+  { to: "/about", key: "nav.about" },
+  { to: "/services", key: "nav.services" },
+  { to: "/certifications", key: "nav.certifications" },
+  { to: "/projects", key: "nav.projects" },
+  { to: "/portfolio", key: "nav.portfolio" },
+  { to: "/videos", key: "nav.videos" },
+  { to: "/process", key: "nav.process" },
+  { to: "/coverage", key: "nav.coverage" },
+  { to: "/faq", key: "nav.faq" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { lang, setLang, t } = useLang();
+  const toggleLang = () => setLang(lang === "en" ? "ms" : "en");
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-foreground/5">
@@ -33,22 +36,30 @@ export function Header() {
               className="hover:text-primary transition-colors"
               activeProps={{ className: "text-primary" }}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={toggleLang}
+            aria-label={`Switch language to ${lang === "en" ? "Bahasa Malaysia" : "English"}`}
+            className="mono text-[11px] font-bold uppercase tracking-widest px-3 py-2 border border-foreground/15 hover:bg-foreground hover:text-background transition-colors"
+          >
+            {t("lang.toggle")}
+          </button>
           <Link
             to="/contact"
             className="hidden sm:inline-flex bg-accent text-accent-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors duration-300"
           >
-            Get Quotation
+            {t("cta.getQuotation")}
           </Link>
           <button
             type="button"
             className="lg:hidden p-2"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("menu.close") : t("menu.open")}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -67,7 +78,7 @@ export function Header() {
                   className="block py-3 text-sm font-semibold uppercase tracking-wider hover:text-primary"
                   activeProps={{ className: "text-primary" }}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </Link>
               </li>
             ))}
@@ -77,7 +88,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="block mt-2 bg-accent text-accent-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest text-center"
               >
-                Get Quotation
+                {t("cta.getQuotation")}
               </Link>
             </li>
           </ul>

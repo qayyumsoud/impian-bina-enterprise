@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CertStrip } from "@/components/site/CertStrip";
+import { useLang } from "@/lib/i18n";
 import heroImg from "@/assets/hero-construction.webp";
 import concreteImg from "@/assets/hero-concrete.webp";
 import residentialImg from "@/assets/service-residential.webp";
@@ -40,6 +41,7 @@ const featuredProjects = [
 ];
 
 function HomePage() {
+  const { t } = useLang();
   return (
     <>
       {/* Hero */}
@@ -47,34 +49,33 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-10 md:gap-12 items-end">
           <div className="md:col-span-8 fade-in-up">
             <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-6">
-              Established 2008 · Negeri Sembilan & Melaka
+              {t("home.eyebrow")}
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-balance mb-8 uppercase">
-              Building the{" "}
+              {t("home.h1.a")}{" "}
               <span
                 className="text-transparent"
                 style={{ WebkitTextStroke: "1.5px var(--color-foreground)" }}
               >
-                Future
+                {t("home.h1.b")}
               </span>{" "}
-              with Local Precision.
+              {t("home.h1.c")}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed text-pretty">
-              Impian Bina delivers residential, infrastructure, and government contracts
-              across Negeri Sembilan and Melaka — from concrete pour to finishing touch.
+              {t("home.intro")}
             </p>
             <div className="flex flex-wrap gap-3 mt-10">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-xs tracking-widest hover:bg-accent transition-colors"
               >
-                Get Quotation
+                {t("cta.getQuotation")}
               </Link>
               <Link
                 to="/projects"
                 className="px-8 py-4 border border-foreground/15 font-bold uppercase text-xs tracking-widest hover:bg-foreground hover:text-background transition-colors"
               >
-                View Projects
+                {t("cta.viewProjects")}
               </Link>
             </div>
           </div>
@@ -99,8 +100,8 @@ function HomePage() {
       <section className="py-24 md:py-32 bg-card">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 border-b border-foreground/10 pb-8 gap-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Core Services</h2>
-            <span className="mono text-xs text-muted-foreground">01 — 05 Expertise</span>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">{t("home.services.title")}</h2>
+            <span className="mono text-xs text-muted-foreground">{t("home.services.meta")}</span>
           </div>
 
           <div className="grid md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
@@ -129,7 +130,7 @@ function HomePage() {
               to="/services"
               className="inline-flex mono text-xs uppercase tracking-widest text-primary hover:text-foreground"
             >
-              See all services →
+              {t("home.services.seeAll")}
             </Link>
           </div>
         </div>
@@ -139,9 +140,9 @@ function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 border-b border-foreground/10 pb-8 gap-4">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase">{t("home.featured.title")}</h2>
             <Link to="/projects" className="mono text-xs uppercase tracking-widest text-primary hover:text-foreground">
-              View all →
+              {t("home.featured.viewAll")}
             </Link>
           </div>
 
@@ -170,16 +171,13 @@ function HomePage() {
       <section className="bg-background border-y border-foreground/10 py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-4">Service Area</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-6">
-              Negeri Sembilan<br/>& Melaka.
+            <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-4">{t("home.coverage.eyebrow")}</p>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-6 whitespace-pre-line">
+              {t("home.coverage.title")}
             </h2>
-            <p className="text-muted-foreground max-w-md leading-relaxed mb-6">
-              Headquartered in Seremban with a regional office in Melaka City. Projects
-              outside these states require a minimum contract value of <strong className="text-foreground">RM250,000</strong>.
-            </p>
+            <p className="text-muted-foreground max-w-md leading-relaxed mb-6">{t("home.coverage.body")}</p>
             <Link to="/coverage" className="mono text-xs uppercase tracking-widest text-primary hover:text-foreground">
-              Coverage details →
+              {t("home.coverage.link")}
             </Link>
           </div>
           <div className="relative">
@@ -192,9 +190,9 @@ function HomePage() {
               className="w-full aspect-[4/5] object-cover"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-8 md:p-10 max-w-xs">
-              <p className="mono text-[10px] uppercase tracking-widest opacity-70 mb-2">Min. Project</p>
+              <p className="mono text-[10px] uppercase tracking-widest opacity-70 mb-2">{t("home.coverage.minProject")}</p>
               <p className="text-3xl font-black tracking-tighter">RM 250,000</p>
-              <p className="text-[10px] mt-3 opacity-70 uppercase tracking-widest">For projects outside NS & Melaka</p>
+              <p className="text-[10px] mt-3 opacity-70 uppercase tracking-widest">{t("home.coverage.minNote")}</p>
             </div>
           </div>
         </div>
@@ -203,16 +201,16 @@ function HomePage() {
       {/* CTA */}
       <section className="py-24 md:py-32 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-6">Ready to build?</p>
+          <p className="mono text-[11px] uppercase tracking-[0.3em] text-primary mb-6">{t("home.cta.eyebrow")}</p>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.95] mb-8">
-            Let's pour the foundation of your next project.
+            {t("home.cta.title")}
           </h2>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link to="/contact" className="px-8 py-4 bg-primary text-primary-foreground font-bold uppercase text-xs tracking-widest hover:bg-background hover:text-foreground transition-colors">
-              Contact Us
+              {t("cta.contactUs")}
             </Link>
             <Link to="/contact" className="px-8 py-4 border border-white/20 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-accent transition-colors">
-              Request Quotation
+              {t("cta.requestQuotation")}
             </Link>
           </div>
         </div>
