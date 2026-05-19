@@ -156,8 +156,7 @@ function ContactPage() {
             className="w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            // src="https://www.google.com/maps?q=Seremban+Negeri+Sembilan+Malaysia&output=embed"
-            src="https://maps.app.goo.gl/SH77Snq1w33zQ1Q6A"
+            src="https://www.google.com/maps?q=Seremban+Negeri+Sembilan+Malaysia&output=embed"
           />
         </div>
       </section>
