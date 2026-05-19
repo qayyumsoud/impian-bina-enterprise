@@ -81,7 +81,7 @@ function CertificationsPage() {
             Procurement teams can request scanned originals of any certification via email — we typically respond within one working day.
           </p>
           <a
-            href="mailto:qayyumsoud@gmail.com"
+            href="mailto:impianbina@gmail.com"
             className="mt-8 inline-flex items-center bg-accent text-accent-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors"
           >
             Request originals

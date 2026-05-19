@@ -84,7 +84,7 @@ function ContactPage() {
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Email</p>
-              <a href="mailto:qayyumsoud@gmail.com" className="block text-xl font-black tracking-tighter hover:text-primary break-all">impianbinaenterprise@gmail.com</a>
+              <a href="mailto:impianbina2025@gmail.com" className="block text-xl font-black tracking-tighter hover:text-primary break-all">impianbina2025@gmail.com</a>
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Office</p>
