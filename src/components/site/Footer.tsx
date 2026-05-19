@@ -23,7 +23,7 @@ export function Footer() {
           <ul className="space-y-3">
             <li><a className="text-sm font-semibold hover:text-primary" href="tel:+6067600000">+60 6-760 0000</a></li>
             <li><a className="text-sm font-semibold hover:text-primary" href="https://wa.me/60193706316" target="_blank" rel="noreferrer">WhatsApp +60 19-370 6316</a></li>
-            <li><a className="text-sm font-semibold hover:text-primary break-all" href="mailto:qayyumsoud@gmail.com">qayyumsoud@gmail.com</a></li>
+            <li><a className="text-sm font-semibold hover:text-primary break-all" href="mailto:impianbinaenterprise@gmail.com">impianbinaenterprise@gmail.com</a></li>
           </ul>
         </div>
 
