@@ -22,8 +22,8 @@ export function Footer() {
           <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">{t("footer.contact")}</p>
           <ul className="space-y-3">
             <li><a className="text-sm font-semibold hover:text-primary" href="tel:+6067600000">+60 6-760 0000</a></li>
-            <li><a className="text-sm font-semibold hover:text-primary" href="https://wa.me/60127600000" target="_blank" rel="noreferrer">WhatsApp +60 12-760 0000</a></li>
-            <li><a className="text-sm font-semibold hover:text-primary break-all" href="mailto:hello@impianbina.com.my">hello@impianbina.com.my</a></li>
+            <li><a className="text-sm font-semibold hover:text-primary" href="https://wa.me/60193706316" target="_blank" rel="noreferrer">WhatsApp +60 19-370 6316</a></li>
+            <li><a className="text-sm font-semibold hover:text-primary break-all" href="mailto:qayyumsoud@gmail.com">qayyumsoud@gmail.com</a></li>
           </ul>
         </div>
 
@@ -43,7 +43,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
         <p>&copy; {new Date().getFullYear()} Impian Bina Sdn Bhd. {t("footer.rights")}</p>
-        <p className="mono">CIDB G7 &middot; SSM Registered &middot; SPKK &middot; STB</p>
+        <p className="mono">CIDB G1 &middot; SSM Registered &middot; SPKK &middot; STB</p>
       </div>
     </footer>
   );

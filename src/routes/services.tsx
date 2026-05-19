@@ -51,7 +51,7 @@ const services = [
     name: "Government Projects",
     img: governmentImg,
     desc: "SPKK-certified for government tenders. We deliver schools, clinics, council offices and public facilities to JKR specifications with full audit-trail documentation for procurement compliance.",
-    benefits: ["SPKK Grade G7 certified", "JKR/CIDB-compliant specifications", "Audit-ready cost documentation", "Bumiputera ownership"],
+    benefits: ["SPKK Grade G1 certified", "JKR/CIDB-compliant specifications", "Audit-ready cost documentation", "Bumiputera ownership"],
   },
   {
     idx: "05",

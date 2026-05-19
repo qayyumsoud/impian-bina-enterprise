@@ -4,10 +4,10 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/certifications")({
   head: () => ({
     meta: [
-      { title: "Certifications — SSM, CIDB G7, SPKK, STB | Impian Bina" },
-      { name: "description", content: "Impian Bina is registered and certified: SSM company registration, CIDB Grade G7 contractor licence, SPKK certification, and STB Bumiputera status." },
+      { title: "Certifications — SSM, CIDB G1, SPKK, STB | Impian Bina" },
+      { name: "description", content: "Impian Bina is registered and certified: SSM company registration, CIDB Grade G1 contractor licence, SPKK certification, and STB Bumiputera status." },
       { property: "og:title", content: "Certifications & Licences — Impian Bina" },
-      { property: "og:description", content: "SSM, CIDB G7, SPKK, and STB certified contractor." },
+      { property: "og:description", content: "SSM, CIDB G1, SPKK, and STB certified contractor." },
       { property: "og:url", content: "/certifications" },
     ],
     links: [{ rel: "canonical", href: "/certifications" }],
@@ -25,8 +25,8 @@ const certs = [
   {
     code: "CIDB",
     issuer: "Construction Industry Development Board",
-    reg: "Grade G7 · Category B, CE, ME",
-    body: "Highest contractor grade — no project value limit. CIDB G7 is required for all government tenders above RM10 million and is the industry's benchmark for delivery capability.",
+    reg: "Grade G1 · Category B, CE, ME",
+    body: "Highest contractor grade — no project value limit. CIDB G1 is required for all government tenders above RM10 million and is the industry's benchmark for delivery capability.",
   },
   {
     code: "SPKK",
@@ -81,7 +81,7 @@ function CertificationsPage() {
             Procurement teams can request scanned originals of any certification via email — we typically respond within one working day.
           </p>
           <a
-            href="mailto:hello@impianbina.com.my"
+            href="mailto:qayyumsoud@gmail.com"
             className="mt-8 inline-flex items-center bg-accent text-accent-foreground px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors"
           >
             Request originals

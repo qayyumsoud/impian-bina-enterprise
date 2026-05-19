@@ -19,7 +19,7 @@ const organizationJsonLd = {
   "@type": "GeneralContractor",
   name: "Impian Bina Sdn Bhd",
   url: "/",
-  email: "hello@impianbina.com.my",
+  email: "qayyumsoud@gmail.com",
   telephone: "+60-6-760-0000",
   address: {
     "@type": "PostalAddress",

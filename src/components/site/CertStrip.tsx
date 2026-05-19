@@ -1,4 +1,4 @@
-const certs = ["CIDB Malaysia", "SSM Registered", "SPKK Grade G7", "STB Certified"];
+const certs = ["CIDB Malaysia", "SSM Registered", "SPKK Grade G1", "STB Certified"];
 
 export function CertStrip() {
   return (

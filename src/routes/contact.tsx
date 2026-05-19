@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { toast } from "sonner";
 import { MessageCircle } from "lucide-react";
 
-const WA_NUMBER = "60127600000";
+const WA_NUMBER = "60193706316";
 const WA_TEMPLATE = `Hi Impian Bina,
 
 Saya ingin mendapatkan sebut harga untuk projek berikut:
@@ -79,12 +79,12 @@ function ContactPage() {
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">WhatsApp</p>
-              <a href="https://wa.me/60127600000" target="_blank" rel="noreferrer" className="block text-2xl font-black tracking-tighter hover:text-primary">+60 12-760 0000</a>
+              <a href="https://wa.me/60193706316" target="_blank" rel="noreferrer" className="block text-2xl font-black tracking-tighter hover:text-primary">+60 19-370 6316</a>
               <p className="text-xs text-muted-foreground mt-1">Quickest response — site photos welcome</p>
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Email</p>
-              <a href="mailto:hello@impianbina.com.my" className="block text-xl font-black tracking-tighter hover:text-primary break-all">hello@impianbina.com.my</a>
+              <a href="mailto:qayyumsoud@gmail.com" className="block text-xl font-black tracking-tighter hover:text-primary break-all">qayyumsoud@gmail.com</a>
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Office</p>
@@ -156,7 +156,8 @@ function ContactPage() {
             className="w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Seremban+Negeri+Sembilan+Malaysia&output=embed"
+            // src="https://www.google.com/maps?q=Seremban+Negeri+Sembilan+Malaysia&output=embed"
+            src="https://maps.app.goo.gl/SH77Snq1w33zQ1Q6A"
           />
         </div>
       </section>

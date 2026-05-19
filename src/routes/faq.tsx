@@ -10,7 +10,7 @@ import {
 const faqs = [
   { q: "Do you provide free quotations?", a: "Yes. Initial consultation and quotation are always free. You'll receive a detailed BQ within 7 working days of the site visit, with no obligation to proceed." },
   { q: "What areas do you cover?", a: "We exclusively serve Negeri Sembilan and Melaka. Projects elsewhere are considered case-by-case and require a minimum contract value of RM250,000." },
-  { q: "Do you handle government projects?", a: "Yes. We hold CIDB Grade G7 and an active SPKK certificate, so we can bid directly on JKR, state, and federal tenders. We also hold Bumiputera (STB) status." },
+  { q: "Do you handle government projects?", a: "Yes. We hold CIDB Grade G1 and an active SPKK certificate, so we can bid directly on JKR, state, and federal tenders. We also hold Bumiputera (STB) status." },
   { q: "What is the minimum project value outside Negeri Sembilan and Melaka?", a: "RM250,000. This allows us to maintain a dedicated on-site supervisor and logistics chain without compromising our core regional clients." },
   { q: "How long does a typical residential build take?", a: "A standard double-storey bungalow takes 8 to 14 months from contract sign to handover. Renovations vary between 3 and 9 months depending on structural scope." },
   { q: "Do you offer post-handover warranty?", a: "Yes — every project includes a 1-year defects liability period and a 10-year structural warranty on new residential builds." },

@@ -13,15 +13,15 @@ import project6 from "@/assets/project-6.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Impian Bina — CIDB G7 Contractor in Negeri Sembilan & Melaka" },
+      { title: "Impian Bina — CIDB G1 Contractor in Negeri Sembilan & Melaka" },
       {
         name: "description",
         content:
-          "CIDB G7 licensed construction company in Negeri Sembilan and Melaka. Residential, commercial, government, and infrastructure projects since 2008.",
+          "CIDB G1 licensed construction company in Negeri Sembilan and Melaka. Residential, commercial, government, and infrastructure projects since 2000.",
       },
-      { name: "keywords", content: "construction Negeri Sembilan, kontraktor Melaka, CIDB G7, SPKK contractor, renovation Seremban, government projects Malaysia" },
+      { name: "keywords", content: "construction Negeri Sembilan, kontraktor Melaka, CIDB G1, SPKK contractor, renovation Seremban, government projects Malaysia" },
       { property: "og:title", content: "Impian Bina — Building the Future with Local Precision" },
-      { property: "og:description", content: "CIDB G7 licensed contractor serving Negeri Sembilan and Melaka." },
+      { property: "og:description", content: "CIDB G1 licensed contractor serving Negeri Sembilan and Melaka." },
       { property: "og:url", content: "/" },
     ],
   }),

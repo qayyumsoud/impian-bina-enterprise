@@ -7,9 +7,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Impian Bina — Construction Company in Negeri Sembilan" },
-      { name: "description", content: "Established 2008. Impian Bina is a CIDB G7 contractor based in Seremban delivering residential, commercial and government construction in Negeri Sembilan and Melaka." },
+      { name: "description", content: "Established 2000. Impian Bina is a CIDB G1 contractor based in Seremban delivering residential, commercial and government construction in Negeri Sembilan and Melaka." },
       { property: "og:title", content: "About Impian Bina" },
-      { property: "og:description", content: "CIDB G7 contractor based in Seremban — over 16 years of building excellence." },
+      { property: "og:description", content: "CIDB G1 contractor based in Seremban — over 20 years of building excellence." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/about")({
 const values = [
   { idx: "01", title: "Built to Last", body: "Every joint, beam and slab is engineered to outlive the contract — not just pass it." },
   { idx: "02", title: "Transparent Costing", body: "Detailed BQs and weekly progress reports. No surprise variation orders." },
-  { idx: "03", title: "Local Mastery", body: "Sixteen years deep in Negeri Sembilan and Melaka soil, councils, and supply chains." },
+  { idx: "03", title: "Local Mastery", body: "Twenty years deep in Negeri Sembilan and Melaka soil, councils, and supply chains." },
   { idx: "04", title: "Safety First", body: "Zero-incident jobsites through DOSH-compliant procedures and on-site supervisors." },
 ];
 
@@ -28,9 +28,9 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About — Est. 2008"
-        title={<>Sixteen years of building Malaysia's southern corridor.</>}
-        intro="Impian Bina Sdn Bhd is a Bumiputera-owned CIDB G7 construction company headquartered in Seremban. From custom bungalows in Sendayan to civic infrastructure across Melaka, we build with the discipline and longevity that local communities depend on."
+        eyebrow="About — Est. 2000"
+        title={<>Twenty years of building Malaysia's southern corridor.</>}
+        intro="Impian Bina Sdn Bhd is a Bumiputera-owned CIDB G1 construction company headquartered in Seremban. From custom bungalows in Sendayan to civic infrastructure across Melaka, we build with the discipline and longevity that local communities depend on."
       />
 
       <section className="py-20 md:py-28">
@@ -49,8 +49,8 @@ function AboutPage() {
               From a two-man crew to a 60-strong team.
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Founded in 2008 by two veteran site engineers, Impian Bina started with a single shophouse renovation in Seremban. Today we manage simultaneous residential, commercial and government contracts across two states.</p>
-              <p>Our growth has stayed deliberate — we hire from local technical colleges, partner with proven subcontractors, and stay licensed to G7 so we can bid on any project size.</p>
+              <p>Founded in 2000 by two veteran site engineers, Impian Bina started with a single shophouse renovation in Seremban. Today we manage simultaneous residential, commercial and government contracts across two states.</p>
+              <p>Our growth has stayed deliberate — we hire from local technical colleges, partner with proven subcontractors, and stay licensed to G1 so we can bid on any project size.</p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ function AboutPage() {
           {[
             { n: "16+", l: "Years operating" },
             { n: "240+", l: "Projects delivered" },
-            { n: "G7", l: "CIDB Grade" },
+            { n: "G1", l: "CIDB Grade" },
             { n: "60", l: "Crew & engineers" },
           ].map((s) => (
             <div key={s.l}>
