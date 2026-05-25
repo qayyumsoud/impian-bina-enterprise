@@ -1,102 +1,115 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
-import p1 from "@/assets/project-1.webp";
-import p2 from "@/assets/project-2.webp";
-import p3 from "@/assets/project-3.webp";
-import p4 from "@/assets/project-4.webp";
-import p5 from "@/assets/project-5.webp";
-import p6 from "@/assets/project-6.webp";
+import { X } from "lucide-react";
+
+// Placeholder imports for your gallery images.
+// Adjust the path "@/" and directory names to match your exact asset structure.
+import p01 from "@/assets/gallery/p01.webp";
+import p02 from "@/assets/gallery/p02.webp";
+import p03 from "@/assets/gallery/p03.webp";
+import p04 from "@/assets/gallery/p04.webp";
+import p05 from "@/assets/gallery/p05.webp";
+import p06 from "@/assets/gallery/p06.webp";
+import p07 from "@/assets/gallery/p07.webp";
+import p08 from "@/assets/gallery/p08.webp";
+import p09 from "@/assets/gallery/p09.webp";
+import p10 from "@/assets/gallery/p10.webp";
+import p11 from "@/assets/gallery/p11.webp";
+import p12 from "@/assets/gallery/p12.webp";
+import p13 from "@/assets/gallery/p13.webp";
+import p14 from "@/assets/gallery/p14.webp";
+import p15 from "@/assets/gallery/p15.webp";
+import p16 from "@/assets/gallery/p16.webp";
+import p17 from "@/assets/gallery/p17.webp";
+import p18 from "@/assets/gallery/p18.webp";
+import p19 from "@/assets/gallery/p19.webp";
+import p20 from "@/assets/gallery/p20.webp";
+
+const galleryImages: string[] = [
+  p01, p02, p03, p04, p05, p06, p07, p08, p09, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20
+];
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects & Gallery — Completed and Ongoing Builds | Impian Bina" },
-      { name: "description", content: "Browse our portfolio of completed and ongoing residential, commercial, and government construction projects across Negeri Sembilan and Melaka." },
-      { property: "og:title", content: "Projects — Impian Bina" },
-      { property: "og:description", content: "Residential, commercial and government builds across NS and Melaka." },
-      { property: "og:url", content: "/projects" },
+      { title: "Build Gallery — Impian Bina" },
+      { name: "description", content: "A visual showcase of our completed construction projects." },
+      { property: "og:title", content: "Build Gallery — Impian Bina" },
+      { property: "og:description", content: "A visual showcase of our completed construction projects." },
+      { property: "og:url", content: "/gallery" },
     ],
-    links: [{ rel: "canonical", href: "/projects" }],
+    links: [{ rel: "canonical", href: "/gallery" }],
   }),
-  component: ProjectsPage,
+  component: GalleryPage,
 });
 
-type Category = "All" | "Residential" | "Commercial" | "Government";
-
-const projects: { title: string; location: string; category: Exclude<Category, "All">; status: "Completed" | "Ongoing"; img: string }[] = [
-  { title: "Bandar Sri Sendayan Bungalow", location: "Seremban, NS", category: "Residential", status: "Completed", img: p1 },
-  { title: "Jalan Hang Tuah Shoplots", location: "Melaka City", category: "Commercial", status: "Completed", img: p2 },
-  { title: "FT12 Trunk Road Upgrade", location: "Port Dickson, NS", category: "Government", status: "Ongoing", img: p3 },
-  { title: "Senawang Logistics Hub", location: "Senawang, NS", category: "Commercial", status: "Completed", img: p4 },
-  { title: "Jonker Walk Shophouse Restoration", location: "Melaka City", category: "Residential", status: "Completed", img: p5 },
-  { title: "SK Bukit Beruang Rebuild", location: "Melaka", category: "Government", status: "Ongoing", img: p6 },
-];
-
-const categories: Category[] = ["All", "Residential", "Commercial", "Government"];
-
-function ProjectsPage() {
-  const [filter, setFilter] = useState<Category>("All");
-  const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+function GalleryPage() {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
 
   return (
     <>
       <PageHero
-        eyebrow="Portfolio"
-        title="Sites we've poured, framed, and finished."
-        intro="A selection of completed and ongoing work across our two service states. Filter by category to narrow the list."
+        eyebrow="Our Work"
+        title="Build Gallery."
+        intro="A visual showcase of our completed construction projects and on-site execution."
       />
 
-      <section className="py-12 md:py-16">
+      {/* Grid Section */}
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap gap-2 mb-12 border-b border-foreground/10 pb-6">
-            {categories.map((c) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10">
+            {galleryImages.map((src, idx) => (
               <button
-                key={c}
+                key={idx}
                 type="button"
-                onClick={() => setFilter(c)}
-                aria-pressed={filter === c}
-                className={`px-5 py-2 text-xs font-bold uppercase tracking-widest border transition-colors ${
-                  filter === c
-                    ? "bg-foreground text-background border-foreground"
-                    : "border-foreground/15 hover:border-foreground"
-                }`}
+                onClick={() => setActiveImage(src)}
+                className="group relative aspect-square w-full overflow-hidden bg-muted"
+                aria-label={`View gallery image ${idx + 1}`}
               >
-                {c}
+                <img
+                  src={src}
+                  alt={`Construction progress or completion ${idx + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
               </button>
-            ))}
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((p) => (
-              <article key={p.title} className="group">
-                <div className="overflow-hidden">
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    loading="lazy"
-                    width={1200}
-                    height={900}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-4 flex items-start justify-between gap-3">
-                  <div>
-                    <p className="mono text-[10px] uppercase tracking-widest text-primary">{p.category}</p>
-                    <h3 className="font-bold uppercase tracking-tight mt-1">{p.title}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">{p.location}</p>
-                  </div>
-                  <span className={`mono text-[10px] uppercase tracking-widest px-2 py-1 border ${
-                    p.status === "Ongoing" ? "border-primary text-primary" : "border-foreground/20 text-muted-foreground"
-                  }`}>
-                    {p.status}
-                  </span>
-                </div>
-              </article>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Fullscreen Lightbox Modal */}
+      {activeImage && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Fullscreen image view"
+          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4 md:p-8 backdrop-blur-sm"
+          onClick={() => setActiveImage(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setActiveImage(null)}
+            aria-label="Close fullscreen"
+            className="absolute top-4 right-4 md:top-8 md:right-8 p-3 text-white/70 hover:text-white hover:bg-white/10 transition-colors z-10"
+          >
+            <X className="size-8" />
+          </button>
+          
+          <div 
+            className="relative max-w-6xl w-full max-h-[90vh] flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={activeImage} 
+              alt="Fullscreen view" 
+              className="max-w-full max-h-[90vh] object-contain" 
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

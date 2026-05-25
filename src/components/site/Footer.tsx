@@ -18,25 +18,61 @@ export function Footer() {
           </address>
         </div>
 
-        <div>
-          <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">{t("footer.contact")}</p>
-          <ul className="space-y-3">
-            <li><a className="text-sm font-semibold hover:text-primary" href="tel:+6067600000">+60 6-760 0000</a></li>
-            <li><a className="text-sm font-semibold hover:text-primary" href="https://wa.me/60193706316" target="_blank" rel="noreferrer">WhatsApp +60 19-370 6316</a></li>
-            <li><a className="text-sm font-semibold hover:text-primary break-all" href="mailto:impianbina2025@gmail.com">impianbina2025@gmail.com</a></li>
-          </ul>
+        <div className="flex flex-col gap-8">
+          <div>
+            <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">{t("footer.contact")}</p>
+            <ul className="space-y-3">
+              <li><a className="text-sm font-semibold hover:text-primary transition-colors" href="tel:+6067600000">+60 6-760 0000</a></li>
+              <li><a className="text-sm font-semibold hover:text-primary transition-colors" href="https://wa.me/60193706316" target="_blank" rel="noreferrer">WhatsApp +60 19-370 6316</a></li>
+              <li><a className="text-sm font-semibold hover:text-primary break-all transition-colors" href="mailto:impianbina2025@gmail.com">impianbina2025@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">Follow Us</p>
+            <ul className="flex gap-4">
+              <li>
+                <a 
+                  className="text-white/70 hover:text-primary transition-colors inline-block" 
+                  href="https://instagram.com/impianbina" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label="Follow us on Instagram"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a 
+                  className="text-white/70 hover:text-primary transition-colors inline-block" 
+                  href="https://www.tiktok.com/@officialimpianbina?_r=1&_t=ZS-96dc7oDoKSy" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label="Follow us on TikTok"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5">
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div>
           <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">{t("footer.explore")}</p>
           <ul className="space-y-2 text-sm">
-            <li><Link className="hover:text-primary" to="/services">{t("nav.services")}</Link></li>
-            <li><Link className="hover:text-primary" to="/certifications">{t("nav.certifications")}</Link></li>
-            <li><Link className="hover:text-primary" to="/projects">{t("nav.projects")}</Link></li>
-            <li><Link className="hover:text-primary" to="/portfolio">{t("nav.portfolio")}</Link></li>
-            <li><Link className="hover:text-primary" to="/process">{t("nav.process")}</Link></li>
-            <li><Link className="hover:text-primary" to="/coverage">{t("nav.coverage")}</Link></li>
-            <li><Link className="hover:text-primary" to="/contact">{t("cta.contactUs")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/services">{t("nav.services")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/certifications">{t("nav.certifications")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/projects">{t("nav.projects")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/portfolio">{t("nav.portfolio")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/process">{t("nav.process")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/coverage">{t("nav.coverage")}</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/contact">{t("cta.contactUs")}</Link></li>
           </ul>
         </div>
       </div>
