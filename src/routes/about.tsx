@@ -94,15 +94,16 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-card border-t border-foreground/10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<section className="py-20 md:py-28 bg-card border-t border-foreground/10">
+        {/* Changed from grid to flex flex-wrap justify-center */}
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-16 text-center">
           {[
             { n: "16+", l: "Years operating" },
-            { n: "240+", l: "Projects delivered" },
+            { n: "1000+", l: "Projects delivered" },
             { n: "G1", l: "CIDB Grade" },
-            { n: "60", l: "Crew & engineers" },
           ].map((s) => (
-            <div key={s.l}>
+            // Added min-width so the items maintain solid spacing on mobile
+            <div key={s.l} className="min-w-[150px] md:min-w-[200px]">
               <p className="text-5xl md:text-6xl font-black tracking-tighter text-primary">{s.n}</p>
               <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground mt-2">{s.l}</p>
             </div>

@@ -12,7 +12,7 @@ const faqs = [
   { q: "What areas do you cover?", a: "We exclusively serve Negeri Sembilan and Melaka. Projects elsewhere are considered case-by-case and require a minimum contract value of RM250,000." },
   { q: "Do you handle government projects?", a: "Yes. We hold CIDB Grade G1 and an active SPKK certificate, so we can bid directly on JKR, state, and federal tenders. We also hold Bumiputera (STB) status." },
   { q: "What is the minimum project value outside Negeri Sembilan and Melaka?", a: "RM250,000. This allows us to maintain a dedicated on-site supervisor and logistics chain without compromising our core regional clients." },
-  { q: "How long does a typical residential build take?", a: "A standard double-storey bungalow takes 8 to 14 months from contract sign to handover. Renovations vary between 3 and 9 months depending on structural scope." },
+  { q: "How long does a typical residential build take?", a: "A standard double-storey bungalow takes 4 to 8 months from contract sign to handover. Renovations vary between 3 and 9 months depending on structural scope." },
   { q: "Do you offer post-handover warranty?", a: "Yes — every project includes a 1-year defects liability period and a 10-year structural warranty on new residential builds." },
   { q: "Can you work with my own architect or designer?", a: "Absolutely. We frequently collaborate with external architects and interior designers. We can also recommend trusted partners if you don't have one." },
   { q: "What's the deposit and payment structure?", a: "Standard milestone schedule: 10% on contract sign, then progressive payments tied to verified construction milestones, with 5% retention released after the defects liability period." },

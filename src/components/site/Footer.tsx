@@ -29,6 +29,11 @@ export function Footer() {
           </div>
 
           <div>
+            <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">Working Hours</p>
+            <p className="text-sm text-white/80">Mon &ndash; Sat: 8:00 AM &ndash; 5:00 PM</p>
+          </div>
+
+          <div>
             <p className="mono text-[10px] text-white/30 uppercase tracking-widest mb-4">Follow Us</p>
             <ul className="flex gap-4">
               <li>
@@ -79,7 +84,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
         <p>&copy; {new Date().getFullYear()} Impian Bina Sdn Bhd. {t("footer.rights")}</p>
-        <p className="mono">CIDB G1 &middot; SSM Registered &middot; SPKK &middot; STB</p>
+        <p className="mono">CIDB &middot; SSM Registered &middot; SPKK &middot; STB</p>
       </div>
     </footer>
   );

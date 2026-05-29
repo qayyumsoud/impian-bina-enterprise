@@ -75,7 +75,7 @@ function ContactPage() {
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">Phone</p>
               <a href="tel:+6067600000" className="block text-2xl font-black tracking-tighter hover:text-primary">+60 6-760 0000</a>
-              <p className="text-xs text-muted-foreground mt-1">Mon–Sat, 9am–6pm</p>
+              <p className="text-xs text-muted-foreground mt-1">Mon – Sat, 8:00 AM – 5:00 PM</p>
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-widest text-primary mb-2">WhatsApp</p>

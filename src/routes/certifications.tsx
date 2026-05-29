@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/certifications")({
   head: () => ({
     meta: [
-      { title: "Certifications — SSM, CIDB G1, SPKK, STB | Impian Bina" },
+      { title: "Certifications — SSM, CIDB, SPKK, STB | Impian Bina" },
       { name: "description", content: "Impian Bina is registered and certified: SSM company registration, CIDB Grade G1 contractor licence, SPKK certification, and STB Bumiputera status." },
       { property: "og:title", content: "Certifications & Licences — Impian Bina" },
       { property: "og:description", content: "SSM, CIDB G1, SPKK, and STB certified contractor." },

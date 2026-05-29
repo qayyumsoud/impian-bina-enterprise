@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
         content:
           "CIDB G1 licensed construction company in Negeri Sembilan and Melaka. Residential, commercial, government, and infrastructure projects since 2000.",
       },
-      { name: "keywords", content: "construction Negeri Sembilan, kontraktor Melaka, CIDB G1, SPKK contractor, renovation Seremban, government projects Malaysia" },
+      { name: "keywords", content: "construction Negeri Sembilan, kontraktor Melaka, CIDB, SPKK contractor, renovation Seremban, government projects Malaysia" },
       { property: "og:title", content: "Impian Bina — Building the Future with Local Precision" },
       { property: "og:description", content: "CIDB G1 licensed contractor serving Negeri Sembilan and Melaka." },
       { property: "og:url", content: "/" },
